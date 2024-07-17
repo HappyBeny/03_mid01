@@ -1,0 +1,18 @@
+package lang.string.equals;
+
+public class StringEqualsMain2 {
+    public static void main(String[] args) {
+        String str1 = new String("hello"); //x001
+        String str2 = new String("hello"); //x002
+        System.out.println("메서드 호출 비교1 : " + isSame(str1, str2));
+
+        String str3 ="hello";
+        String str4 ="hello";
+        System.out.println("메서드 호출 비교2 : " + isSame(str4, str3));
+    }
+
+    private static boolean isSame(String x, String y) {
+        //return x == y; 확인 도구를 개발하는 개발자는 리터럴이 넘어올지 new String가 넘어올지 모른다.
+        return x.equals(y);
+    }
+}
